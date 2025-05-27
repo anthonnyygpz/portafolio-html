@@ -1,0 +1,18 @@
+/* ######################## */
+/* ####### Skills ######### */
+/* ######################## */
+.skills-container {
+  justify-content: center;
+}
+
+.skill-card {
+  border: 2px solid var(--primary-color);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ################################### */
+/* ####### Skills Responsive ######### */
+/* ################################### */
