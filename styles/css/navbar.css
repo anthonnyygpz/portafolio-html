@@ -1,0 +1,121 @@
+/* ######################## */
+/* ####### Navbar ######### */
+/* ######################## */
+.navbar {
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: var(--font-size-header);
+  color: var(--primary-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none !important;
+}
+
+.nav-menu {
+  gap: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.nav-item {
+  display: inline-block;
+  list-style: none;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  filter: drop-shadow(0 0 3px var(--primary-color));
+}
+
+/* ################################# */
+/* ####### Navbar Responsive ####### */
+/* ################################# */
+
+@media (max-width: 768px) {
+  .navbar {
+    margin-top: 2rem;
+  }
+
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: block !important;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 9px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  .nav-menu {
+    padding: 1rem;
+    margin: 0;
+    gap: 0;
+    border-radius: 8px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+
+    /* Estado inicial: oculto */
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-100px);
+    pointer-events: none;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .nav-menu.show {
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .nav-item {
+    border-bottom: 1px solid var(--primary-color);
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+  }
+  .nav-link {
+    font-size: 1.5rem;
+  }
+}
