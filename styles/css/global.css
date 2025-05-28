@@ -110,10 +110,14 @@ section {
 /* ####### card ####### */
 /* ######################## */
 /* From Uiverse.io by gharsh11032000 */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
 .card {
   position: relative;
-  width: 400px;
-  height: 250px;
   background-color: var(--secondary-color);
   border-radius: 10px;
   display: flex;
@@ -267,10 +271,13 @@ footer {
   .section-contact p {
     width: 90%;
   }
+  .card__content {
+    padding: 10px;
+  }
 
-  .card {
-    width: 100%;
-    height: auto;
+  .card__description {
+    overflow-x: hidden;
+    height: 60px;
   }
 
   .wrap-inputs {
