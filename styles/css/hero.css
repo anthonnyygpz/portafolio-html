@@ -6,6 +6,10 @@
   display: flex;
   width: 100%;
   height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
 }
 
 .hero-container {
